@@ -1,6 +1,6 @@
 {
   "name": "nextez",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "type": "module",
   "main": "dist/bin.js",
@@ -15,7 +15,7 @@
     "ci": "tsc && pnpm run build",
     "changeset": "changeset",
     "release": "pnpm run ci && changeset publish",
-    "local-link": "(pnpm unlink --global | true) && pnpm run build && pnpm link --global" 
+    "local-link": "(pnpm unlink --global | true) && pnpm run build && pnpm link --global"
   },
   "keywords": [],
   "author": "Dhruvil Moradiya <dhruvil1808@gmail.com>",
