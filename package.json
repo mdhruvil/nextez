@@ -1,0 +1,39 @@
+{
+  "name": "nextez",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/bin.js",
+  "bin": {
+    "nextez": "./dist/bin.js"
+  },
+  "scripts": {
+    "dev": "pnpm run \"/dev:/\"",
+    "dev:esbuild": "pnpm run build --watch",
+    "dev:tsc": "tsc --watch --preserveWatchOutput",
+    "build": "esbuild --bundle src/bin.ts --platform=node --outfile=dist/bin.js --packages=external --format=esm",
+    "ci": "tsc && pnpm run build",
+    "release": "pnpm run ci && changeset publish",
+    "local-link": "(pnpm unlink --global | true) && pnpm run build && pnpm link --global" 
+  },
+  "keywords": [],
+  "author": "Dhruvil Moradiya <dhruvil1808@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdhruvil/nextez"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": "*",
+    "vitest": "*"
+  },
+  "dependencies": {
+    "commander": "^10.0.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@types/node": "^20.1.2",
+    "esbuild": "^0.17.18",
+    "typescript": "^5.0.4"
+  }
+}
