@@ -8,7 +8,7 @@ command
   .command("init")
   .description("Initialize a new Nextez project")
   .action(() => {
-    console.log("Hello");
+    console.log("Hello World!!");
   });
 
 command.parse();
